@@ -17,6 +17,8 @@ public class Board
         }
     }
 
+
+
     public void printBoard()
     {
         for (int i = 0; i < board.length; i++)
@@ -29,7 +31,19 @@ public class Board
                     System.out.println();
             }
         }
+        System.out.println();
     }
 
-    
+    public void setSign(int y, int x, Player player)
+    {
+        if (y < board.length && x < board[0].length)
+        {
+            board[y][x] = player.getSign();
+        }
+        else
+        {
+            System.out.println("Niepoprawne koordynaty");
+        }
+
+    }
 }
