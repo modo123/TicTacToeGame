@@ -62,7 +62,7 @@ public class Game
 
             board.setSign(y,x, player);
             board.printBoard();
-            if (checkIfWin())
+            if (checkIfWin(player))
                 break;
             switchPlayers();
         }
@@ -79,7 +79,7 @@ public class Game
     int ile = 0;
     char first, second;
     boolean ifWin = false;
-    public boolean checkIfWin() //sposób dla 3 znaków/ mało uniwersalny
+    public boolean checkIfWin(Player player) //sposób dla 3 znaków/ mało uniwersalny
     {
         for (int i = 0; i < boardSize - 2; i++)
         {
@@ -88,17 +88,17 @@ public class Game
                 if (board.getSign(i, j) != '_')
                 {
                     //sprawdzenie w poziomie
-                    if (board.getSign(i,j) == board.getSign(i,j + 1) && board.getSign(i, j) == board.getSign(i, j + 1) &&  board.getSign(i, j) == board.getSign(i, j + 2) )
+                    if (board.getSign(i,j) == board.getSign(i,j + 1) &&  board.getSign(i, j) == board.getSign(i, j + 2) )
                     {
-                        System.out.println("WYGRANA w POZIOMIE !!!");
+                        System.out.println("KONIEC GRY! WYGRYWA GRACZ " + player.getName() + " !");
                         ifWin = true;
                         return ifWin;
                     }
 
                     //sprawdzanie w pionie
-                    if (board.getSign(i,j) == board.getSign(i + 1, j) && board.getSign(i, j) == board.getSign(i + 1, j) &&  board.getSign(i,j) == board.getSign(i + 2, j ) )
+                    if (board.getSign(i,j) == board.getSign(i + 1, j) &&  board.getSign(i,j) == board.getSign(i + 2, j ) )
                     {
-                        System.out.println("WYGRANA w PIONIE !!!");
+                        System.out.println("KONIEC GRY! WYGRYWA GRACZ " + player.getName() + " !");
                         ifWin = true;
                         return ifWin;
                     }
