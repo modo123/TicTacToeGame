@@ -6,7 +6,7 @@ public class Game
     Board board;
 
     private int turn = 0;
-
+    private int boardSize = 0;
     Scanner scanner = new Scanner(System.in);
 
     public void setPlayersData()
@@ -30,7 +30,7 @@ public class Game
     public void initBoard()
     {
         System.out.println("Podaj rozmiary kwadratowej planszy ");
-        int boardSize = scanner.nextInt();
+        boardSize = scanner.nextInt();
         board = new Board(boardSize);
         board.printBoard();
     }
@@ -48,8 +48,16 @@ public class Game
             int y = scanner.nextInt();
             int x = scanner.nextInt();
 
+            if (y < 0 || y >= board.getSize() || x < 0 || x > board.getSize())
+            {
+                System.out.println("Podałeś nieprawidłowe współrzędne. Spróbuj jeszcze raz");
+                continue;
+            }
+
             board.setSign(y,x, player);
             board.printBoard();
+            if (checkIfWin())
+                break;
             switchPlayers();
         }
 
@@ -62,6 +70,38 @@ public class Game
             turn = 0;
     }
 
+    int ile = 0;
+    char first, second;
+    boolean ifWin = false;
+    public boolean checkIfWin()
+    {
+        for (int i = 0; i < boardSize - 2; i++)
+        {
+            for (int j = 0; j < boardSize - 2; j++)
+            {
+                if (board.getSign(i, j) != '_')
+                {
+                    //sprawdzenie w poziomie
+                    if (board.getSign(i,j) == board.getSign(i,j + 1) && board.getSign(i, j) == board.getSign(i, j + 1) &&  board.getSign(i, j) == board.getSign(i, j + 2) )
+                    {
+                        System.out.println("WYGRANA w POZIOMIE !!!");
+                        ifWin = true;
+                        return ifWin;
+                    }
+
+                    //sprawdzanie w pionie
+                    if (board.getSign(i,j) == board.getSign(i + 1, j) && board.getSign(i, j) == board.getSign(i + 1, j) &&  board.getSign(i,j) == board.getSign(i + 2, j ) )
+                    {
+                        System.out.println("WYGRANA w PIONIE !!!");
+                        ifWin = true;
+                        return ifWin;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     public void initGame()
     {
         setTitleText();
@@ -69,5 +109,6 @@ public class Game
         initBoard();
         playGame();
     }
+
 
 }

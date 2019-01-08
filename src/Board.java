@@ -36,14 +36,16 @@ public class Board
 
     public void setSign(int y, int x, Player player)
     {
-        if (y < board.length && x < board[0].length)
-        {
-            board[y][x] = player.getSign();
-        }
-        else
-        {
-            System.out.println("Niepoprawne koordynaty");
-        }
+              board[y][x] = player.getSign();
+    }
 
+    public char getSign(int y, int x)
+    {
+        return board[y][x];
+    }
+
+    public int getSize()
+    {
+        return board.length;
     }
 }
