@@ -36,7 +36,7 @@ public class Board
 
     public void setSign(int y, int x, Player player)
     {
-              board[y][x] = player.getSign();
+            board[y][x] = player.getSign();
     }
 
     public char getSign(int y, int x)

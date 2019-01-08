@@ -54,6 +54,12 @@ public class Game
                 continue;
             }
 
+            if (board.getSign(y,x) != '_')
+            {
+                System.out.println("Nie możesz tu postawić znaku. Spróbuj jeszcze raz");
+                continue;
+            }
+
             board.setSign(y,x, player);
             board.printBoard();
             if (checkIfWin())
@@ -73,7 +79,7 @@ public class Game
     int ile = 0;
     char first, second;
     boolean ifWin = false;
-    public boolean checkIfWin()
+    public boolean checkIfWin() //sposób dla 3 znaków/ mało uniwersalny
     {
         for (int i = 0; i < boardSize - 2; i++)
         {
