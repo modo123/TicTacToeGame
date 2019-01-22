@@ -76,10 +76,9 @@ public class Game
             turn = 0;
     }
 
-    int ile = 0;
-    char first, second;
+
     boolean ifWin = false;
-    public boolean checkIfWin(Player player) //sposób dla 3 znaków/ mało uniwersalny
+    public boolean checkIfWin(Player player) //sposób dla 3 znaków/ mało uniwersalne
     {
         for (int i = 0; i < boardSize - 2; i++)
         {
