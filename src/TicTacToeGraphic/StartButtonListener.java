@@ -4,14 +4,40 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.temporal.JulianFields;
 
 public class StartButtonListener implements ActionListener
 {
     private JButton[][] squares;
+    private static JButton player1OkButton, player2OkButton, startButton;
+    private JTextField player1Name, player2Name;
+    private Player2 players[];
+    private ImageIcon player1Sign = new ImageIcon("O2.png");
+    private ImageIcon player2Sign = new ImageIcon("X2.png");
 
-    public StartButtonListener(JButton[][] squares)
+    public StartButtonListener(JButton[][] squares, JButton player1OkButton, JButton player2OkButton, JButton startButton, JTextField player1name, JTextField player2Name, Player2[] players)
     {
         this.squares = squares;
+        this.player1OkButton = player1OkButton;
+        this.player2OkButton = player2OkButton;
+        this.startButton = startButton;
+        this.player1Name = player1name;
+        this.player2Name = player2Name;
+        this.players = players;
+
+    }
+
+    public static void checkIfUnlockStartButton()
+    {
+        if ( !player1OkButton.isEnabled() && !player2OkButton.isEnabled() )
+        {
+            startButton.setEnabled(true);
+
+        }
+        else
+        {
+
+        }
     }
 
     @Override
@@ -27,5 +53,8 @@ public class StartButtonListener implements ActionListener
                 squares[i][j].setEnabled(true);
             }
         }
+        players[0] = new Player2(player1Name.getText(), player1Sign );
+        players[1] = new Player2(player2Name.getText(), player2Sign );
+        startButton.setEnabled(false);
     }
 }

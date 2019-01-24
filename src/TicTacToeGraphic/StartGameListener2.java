@@ -20,7 +20,6 @@ public class StartGameListener2 implements ActionListener
     public void actionPerformed(ActionEvent e)
     {
 
-
 //        Object source = e.getSource();
 //
 //        for (int i = 0; i < squares.length; i++)

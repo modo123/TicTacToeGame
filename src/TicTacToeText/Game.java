@@ -65,7 +65,7 @@ public class Game
                 continue;
             }
 
-            board.setSign(y,x, player);
+            board.setSign(y, x, player);
             board.printBoard();
             if (checkIfWin(player))
                 break;

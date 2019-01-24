@@ -7,10 +7,9 @@ public class MainPanel2 extends JPanel
 {
     private static final int BOARD_SIZE = 3;
     private JButton[][] squares = new JButton[BOARD_SIZE][BOARD_SIZE];
-    private FieldListener fieldListener = new FieldListener(squares);
     private OkButton1Listener button1OkListener;
     private OkButton2Listener button2OkListener;
-    private StartButtonListener startButtonListener = new StartButtonListener(squares);
+    Player2[] players = new Player2[2];
 
     public MainPanel2()
     {
@@ -23,14 +22,14 @@ public class MainPanel2 extends JPanel
         JLabel player1Label = new JLabel("Player 1");
         JTextField player1TextField = new JTextField();
         JButton player1OkButton = new JButton("OK");
-        button1OkListener = new OkButton1Listener(informationPanel, player1TextField, player1OkButton);
-        player1OkButton.addActionListener(button1OkListener);
+//        button1OkListener = new OkButton1Listener(informationPanel, player1TextField, player1OkButton);
+//        player1OkButton.addActionListener(button1OkListener);
 
         JLabel player2Label = new JLabel("Player 2");
         JTextField player2TextField = new JTextField();
         JButton player2OkButton = new JButton("OK");
-        button2OkListener = new OkButton2Listener(informationPanel, player2TextField, player2OkButton);
-        player2OkButton.addActionListener(button2OkListener);
+//        button2OkListener = new OkButton2Listener(informationPanel, player2TextField, player2OkButton);
+//        player2OkButton.addActionListener(button2OkListener);
 
         informationPanel.add(player1Label);
         informationPanel.add(player1TextField);
@@ -44,9 +43,29 @@ public class MainPanel2 extends JPanel
         JPanel infoHelpPanel = new JPanel();
         infoHelpPanel.setLayout(new BorderLayout(0,15));
         JButton startButton = new JButton("START GAME");
-        startButton.addActionListener(startButtonListener);
+        startButton.setEnabled(false);
         infoHelpPanel.add(informationPanel, BorderLayout.CENTER);
         infoHelpPanel.add(startButton, BorderLayout.SOUTH);
+
+        StartButtonListener startButtonListener = new StartButtonListener(squares, player1OkButton, player2OkButton, startButton, player1TextField, player2TextField, players);
+        startButton.addActionListener(startButtonListener);
+        button1OkListener = new OkButton1Listener(informationPanel, player1TextField, player1OkButton, startButton, player1TextField);
+        player1OkButton.addActionListener(button1OkListener);
+        button2OkListener = new OkButton2Listener(informationPanel, player2TextField, player2OkButton, startButton, player2TextField);
+        player2OkButton.addActionListener(button2OkListener);
+
+        //****
+        // dolny panel informacyjny
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new GridLayout(2,1,0,10));
+        JLabel playingNowLabel = new JLabel("PLAYING NOW : ");
+        JLabel fieldOccupiedInfoLabel = new JLabel("FIELD OCCUPIED !");
+        bottomPanel.add(playingNowLabel);
+        bottomPanel.add(fieldOccupiedInfoLabel);
+
+
+
+        FieldListener fieldListener = new FieldListener(squares, players, playingNowLabel);
 
         //****
         //plansza do gry
@@ -66,15 +85,7 @@ public class MainPanel2 extends JPanel
             }
         }
 
-        //****
-        // dolny panel informacyjny
-        JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(2,1,0,10));
-        JLabel playingNowLabel = new JLabel("PLAYING NOW : ");
-        JLabel fieldOccupiedInfoLabel = new JLabel("FIELD OCCUPIED !");
-        bottomPanel.add(playingNowLabel);
-        bottomPanel.add(fieldOccupiedInfoLabel);
-
+        //dalsza czesc dolnego panelu
         JPanel bottomHelpPanel = new JPanel();
         bottomHelpPanel.setLayout(new BorderLayout(0,10));
         bottomHelpPanel.add(gameBoard, BorderLayout.CENTER);

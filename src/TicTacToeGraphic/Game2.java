@@ -37,15 +37,22 @@ public class Game2
 
     public void playGame()
     {
-        Player2 player = players[turn];
-        playingNowLabel.setText("PLAYING NOW : " + player.getName());
+        while (true)
+        {
+            Player2 player = players[turn];
+            playingNowLabel.setText("PLAYING NOW : " + player.getName());
 
+            switchPlayers();
+        }
     }
 
     public void initGame()
     {
-        setPlayersData();
-       // StartButtonListener sbl = new StartButtonListener(squares);
+        System.out.println("INICJACJA GRY");
+       // setPlayersData();
+        //FieldListener fl = new FieldListener(players);
+
+
     }
 
 }

@@ -9,13 +9,17 @@ public class OkButton1Listener implements ActionListener
 {
     private JPanel panel;
     private JTextField player1TextField;
-    private JButton player1Button;
+    private JButton player1Button, startButton;
+    private JTextField player1Name;
+    private ImageIcon player1Sign = new ImageIcon("O.png");
 
-    public OkButton1Listener(JPanel panel, JTextField player1TextField, JButton player1Button)
+    public OkButton1Listener(JPanel panel, JTextField player1TextField, JButton player1Button, JButton startButton, JTextField player1Name)
     {
         this.panel = panel;
         this.player1TextField = player1TextField;
         this.player1Button = player1Button;
+        this.startButton = startButton;
+        this.player1Name = player1Name;
     }
 
     @Override
@@ -30,8 +34,9 @@ public class OkButton1Listener implements ActionListener
             player1TextField.setBorder(BorderFactory.createEmptyBorder());
             player1TextField.setEditable(false);
             player1Button.setEnabled(false);
+            StartButtonListener.checkIfUnlockStartButton();
         }
-
+        System.out.println(player1TextField.getText());
         panel.revalidate();
         panel.repaint();
        //System.out.println("LOL");
