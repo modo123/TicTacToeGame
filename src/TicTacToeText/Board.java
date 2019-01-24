@@ -1,3 +1,5 @@
+package TicTacToeText;
+
 public class Board
 {
     private int boardSize;

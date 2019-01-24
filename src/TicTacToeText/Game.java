@@ -1,3 +1,8 @@
+package TicTacToeText;
+
+import TicTacToeText.Board;
+import TicTacToeText.Player;
+
 import java.util.Scanner;
 
 public class Game

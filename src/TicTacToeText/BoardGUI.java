@@ -1,3 +1,5 @@
+package TicTacToeText;
+
 import javax.imageio.ImageIO;
 import javax.management.modelmbean.InvalidTargetObjectTypeException;
 import javax.swing.*;
@@ -19,11 +21,11 @@ public class BoardGUI extends JFrame
     public BoardGUI()
     {
         super("TicTacToe");
-        contents = getContentPane();
-        contents.setLayout(new GridLayout(BOARD_SIZE, BOARD_SIZE));
+        //contents = getContentPane();
+        //contents.setLayout(new GridLayout(BOARD_SIZE, BOARD_SIZE));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800,800);
-        //setLayout(new GridLayout(BOARD_SIZE,BOARD_SIZE));
+        setSize(600,600);
+        setLayout(new GridLayout(BOARD_SIZE,BOARD_SIZE));
         setLocationRelativeTo(null);
         buttonHandler = new ButtonHandler();
 
@@ -31,7 +33,7 @@ public class BoardGUI extends JFrame
         {
             for (int j = 0; j < squares[i].length; j++)
             {
-                squares[i][j] = new JButton();
+                squares[i][j] = new JButton("-");
                 //contents.add(squares[i][j]);
                 add(squares[i][j]);
                 squares[i][j].setBackground(Color.white);
@@ -40,6 +42,21 @@ public class BoardGUI extends JFrame
         }
 
         setVisible(true);
+    }
+
+    public boolean checkField(int x, int y)
+    {
+        if (squares[x][y].getText() != "-")
+        {
+            System.out.println("pole zajete");
+            return false;
+        }
+        else
+        {
+            squares[x][y].setIcon(oIcon);
+            squares[x][y].setText("");
+            return true;
+        }
     }
 
 
@@ -56,7 +73,8 @@ public class BoardGUI extends JFrame
                 {
                     if (source == squares[i][j])
                     {
-                        squares[i][j].setIcon(xIcon);
+                        checkField(i,j);
+                        //squares[i][j].setIcon(oIcon);
 //                        {
 //                            squares[i][j].setBackground(Color.blue);
 //                        }

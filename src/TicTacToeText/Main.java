@@ -1,4 +1,6 @@
-import java.util.Scanner;
+package TicTacToeText;
+
+import TicTacToeText.Game;
 
 public class Main
 {
