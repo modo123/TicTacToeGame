@@ -14,8 +14,9 @@ public class StartButtonListener implements ActionListener
     private Player2 players[];
     private ImageIcon player1Sign = new ImageIcon("O2.png");
     private ImageIcon player2Sign = new ImageIcon("X2.png");
+    private JLabel playingNowLabel;
 
-    public StartButtonListener(JButton[][] squares, JButton player1OkButton, JButton player2OkButton, JButton startButton, JTextField player1name, JTextField player2Name, Player2[] players)
+    public StartButtonListener(JButton[][] squares, JButton player1OkButton, JButton player2OkButton, JButton startButton, JTextField player1name, JTextField player2Name, Player2[] players, JLabel playingNowLabel)
     {
         this.squares = squares;
         this.player1OkButton = player1OkButton;
@@ -24,7 +25,7 @@ public class StartButtonListener implements ActionListener
         this.player1Name = player1name;
         this.player2Name = player2Name;
         this.players = players;
-
+        this.playingNowLabel = playingNowLabel;
     }
 
     public static void checkIfUnlockStartButton()
@@ -56,5 +57,6 @@ public class StartButtonListener implements ActionListener
         players[0] = new Player2(player1Name.getText(), player1Sign );
         players[1] = new Player2(player2Name.getText(), player2Sign );
         startButton.setEnabled(false);
+        playingNowLabel.setText("Now playing : " + players[1].getName());
     }
 }

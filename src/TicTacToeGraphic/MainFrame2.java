@@ -7,7 +7,7 @@ public class MainFrame2 extends JFrame
     public MainFrame2()
     {
         super("TicTacToe");
-        MainPanel2 mainPanel = new MainPanel2();
+        MainPanel2 mainPanel = new MainPanel2(this);
         this.setSize(550,600);
         add(mainPanel);
 

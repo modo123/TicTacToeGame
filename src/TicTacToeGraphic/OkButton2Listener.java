@@ -38,8 +38,6 @@ public class OkButton2Listener implements ActionListener
             StartButtonListener.checkIfUnlockStartButton();
         }
 
-        System.out.println(player2TextField.getText());
-
         panel.revalidate();
         panel.repaint();
         //System.out.println("LOL2");

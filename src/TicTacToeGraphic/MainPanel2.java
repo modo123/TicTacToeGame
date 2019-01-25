@@ -10,12 +10,15 @@ public class MainPanel2 extends JPanel
     private OkButton1Listener button1OkListener;
     private OkButton2Listener button2OkListener;
     Player2[] players = new Player2[2];
+    JFrame mainFrame;
 
-    public MainPanel2()
+    public MainPanel2(JFrame mainFrame)
     {
+        this.mainFrame = mainFrame;
         //****
         //panel z informacjami o graczach
         JPanel informationPanel = new JPanel();
+        //informationPanel.setBackground(Color.white);
         //informationPanel.setPreferredSize(new Dimension(100,100));
         informationPanel.setLayout(new GridLayout(2,3,0,5));
 
@@ -42,30 +45,30 @@ public class MainPanel2 extends JPanel
         //pomocniczy panel do wyrownania wszystkich komponentow w informationPanel
         JPanel infoHelpPanel = new JPanel();
         infoHelpPanel.setLayout(new BorderLayout(0,15));
+        //infoHelpPanel.setBackground(Color.white);
         JButton startButton = new JButton("START GAME");
         startButton.setEnabled(false);
         infoHelpPanel.add(informationPanel, BorderLayout.CENTER);
         infoHelpPanel.add(startButton, BorderLayout.SOUTH);
 
-        StartButtonListener startButtonListener = new StartButtonListener(squares, player1OkButton, player2OkButton, startButton, player1TextField, player2TextField, players);
+        //****
+        // dolny panel informacyjny
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setLayout(new GridLayout(2,1,0,10));
+       // JLabel playingNowLabel = new JLabel("Now playing : ");
+        JLabel playingNowLabel = new JLabel("-");
+        JLabel fieldOccupiedInfoLabel = new JLabel("-");
+        bottomPanel.add(playingNowLabel);
+        bottomPanel.add(fieldOccupiedInfoLabel);
+
+        StartButtonListener startButtonListener = new StartButtonListener(squares, player1OkButton, player2OkButton, startButton, player1TextField, player2TextField, players, playingNowLabel);
         startButton.addActionListener(startButtonListener);
         button1OkListener = new OkButton1Listener(informationPanel, player1TextField, player1OkButton, startButton, player1TextField);
         player1OkButton.addActionListener(button1OkListener);
         button2OkListener = new OkButton2Listener(informationPanel, player2TextField, player2OkButton, startButton, player2TextField);
         player2OkButton.addActionListener(button2OkListener);
 
-        //****
-        // dolny panel informacyjny
-        JPanel bottomPanel = new JPanel();
-        bottomPanel.setLayout(new GridLayout(2,1,0,10));
-        JLabel playingNowLabel = new JLabel("PLAYING NOW : ");
-        JLabel fieldOccupiedInfoLabel = new JLabel("FIELD OCCUPIED !");
-        bottomPanel.add(playingNowLabel);
-        bottomPanel.add(fieldOccupiedInfoLabel);
-
-
-
-        FieldListener fieldListener = new FieldListener(squares, players, playingNowLabel);
+        FieldListener fieldListener = new FieldListener(squares, players, playingNowLabel, fieldOccupiedInfoLabel, mainFrame, player1TextField, player2TextField);
 
         //****
         //plansza do gry

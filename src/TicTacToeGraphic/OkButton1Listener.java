@@ -11,7 +11,7 @@ public class OkButton1Listener implements ActionListener
     private JTextField player1TextField;
     private JButton player1Button, startButton;
     private JTextField player1Name;
-    private ImageIcon player1Sign = new ImageIcon("O.png");
+    private ImageIcon player1Sign = new ImageIcon("O3.png");
 
     public OkButton1Listener(JPanel panel, JTextField player1TextField, JButton player1Button, JButton startButton, JTextField player1Name)
     {
@@ -34,11 +34,15 @@ public class OkButton1Listener implements ActionListener
             player1TextField.setBorder(BorderFactory.createEmptyBorder());
             player1TextField.setEditable(false);
             player1Button.setEnabled(false);
+            //player1Button.setText("");
+            //player1Button.setBackground(Color.white);
+            //player1Button.setBorder(BorderFactory.createEmptyBorder());
+            //player1Button.setIcon(player1Sign);
+
             StartButtonListener.checkIfUnlockStartButton();
         }
-        System.out.println(player1TextField.getText());
+
         panel.revalidate();
         panel.repaint();
-       //System.out.println("LOL");
     }
 }
