@@ -8,13 +8,15 @@ public class MainFrame extends JFrame
     public MainFrame()
     {
         super("TicTacToe");
+        MainPanel mainPanel = new MainPanel(this);
+        mainPanel.setBackground(Color.orange);
+        this.setSize(550,600);
+        add(mainPanel);
 
-        StartGameListener listener = new StartGameListener(this);
-        JPanel informationPanel = new InformationPanel(listener);
-        add(informationPanel);
 
-
-        pack();
+        setLocationRelativeTo(null);
+        setResizable(false);
+        //pack();
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }

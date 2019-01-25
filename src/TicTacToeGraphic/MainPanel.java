@@ -3,16 +3,16 @@ package TicTacToeGraphic;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainPanel2 extends JPanel
+public class MainPanel extends JPanel
 {
     private static final int BOARD_SIZE = 3;
     private JButton[][] squares = new JButton[BOARD_SIZE][BOARD_SIZE];
     private OkButton1Listener button1OkListener;
     private OkButton2Listener button2OkListener;
-    Player2[] players = new Player2[2];
+    Player[] players = new Player[2];
     JFrame mainFrame;
 
-    public MainPanel2(JFrame mainFrame)
+    public MainPanel(JFrame mainFrame)
     {
         this.mainFrame = mainFrame;
         //****
@@ -103,9 +103,6 @@ public class MainPanel2 extends JPanel
         this.setLayout(new BorderLayout(0,15));
         this.add(infoHelpPanel, BorderLayout.CENTER);
         this.add(bottomHelpPanel, BorderLayout.SOUTH);
-
-        Game2 playersNames = new Game2(player1TextField, player2TextField, playingNowLabel, squares);
-        playersNames.initGame();
 
     }
 }

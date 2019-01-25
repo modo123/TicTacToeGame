@@ -4,13 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 
 public class FieldListener implements ActionListener
 {
     private JButton[][] squares;
-    public Player2[] players;
+    public Player[] players;
     private int turn = 1;
     private JLabel playingNowLabel, fieldOccupied;
     //private ImageIcon player2Sign = new ImageIcon("xIconMiddle.png");
@@ -20,7 +19,7 @@ public class FieldListener implements ActionListener
     private JTextField player1Name, player2Name;
 
 
-    public FieldListener(JButton[][] squares, Player2[] players, JLabel playingNowLabel, JLabel fieldOccupied, JFrame mainFrame, JTextField player1Name, JTextField player2Name)
+    public FieldListener(JButton[][] squares, Player[] players, JLabel playingNowLabel, JLabel fieldOccupied, JFrame mainFrame, JTextField player1Name, JTextField player2Name)
     {
         this.squares = squares;
         this.players = players;
@@ -43,7 +42,7 @@ public class FieldListener implements ActionListener
         }
         else if (squares[i][j].getText().equals("-"))
         {
-            Player2 player = players[turn];
+            Player player = players[turn];
             squares[i][j].setIcon(player.getSign());
             squares[i][j].setText("");
             fieldOccupied.setText("");
@@ -137,7 +136,7 @@ public class FieldListener implements ActionListener
         {
             mainFrame.dispose();
 
-            MainFrame2 newMainFrame = new MainFrame2();
+            MainFrame newMainFrame = new MainFrame();
         }
 
         if (drawDialogWindow == 1)
@@ -152,7 +151,7 @@ public class FieldListener implements ActionListener
         {
             mainFrame.dispose();
 
-            MainFrame2 newMainFrame = new MainFrame2();
+            MainFrame newMainFrame = new MainFrame();
         }
 
         if (winnerDialowWindow == 1)
