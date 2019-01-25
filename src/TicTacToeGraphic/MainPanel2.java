@@ -18,34 +18,36 @@ public class MainPanel2 extends JPanel
         //****
         //panel z informacjami o graczach
         JPanel informationPanel = new JPanel();
-        //informationPanel.setBackground(Color.white);
-        //informationPanel.setPreferredSize(new Dimension(100,100));
-        informationPanel.setLayout(new GridLayout(2,3,0,5));
+        informationPanel.setBackground(Color.orange);
+        informationPanel.setLayout(new GridLayout(2,4,0,5));
 
         JLabel player1Label = new JLabel("Player 1");
         JTextField player1TextField = new JTextField();
+        JButton player1Sign = new JButton("p1");
+        player1Sign.setVisible(false);
         JButton player1OkButton = new JButton("OK");
-//        button1OkListener = new OkButton1Listener(informationPanel, player1TextField, player1OkButton);
-//        player1OkButton.addActionListener(button1OkListener);
 
         JLabel player2Label = new JLabel("Player 2");
         JTextField player2TextField = new JTextField();
+        JButton player2Sign = new JButton("p2");
+        player2Sign.setVisible(false);
         JButton player2OkButton = new JButton("OK");
-//        button2OkListener = new OkButton2Listener(informationPanel, player2TextField, player2OkButton);
-//        player2OkButton.addActionListener(button2OkListener);
 
         informationPanel.add(player1Label);
         informationPanel.add(player1TextField);
+        informationPanel.add(player1Sign);
         informationPanel.add(player1OkButton);
+
         informationPanel.add(player2Label);
         informationPanel.add(player2TextField);
+        informationPanel.add(player2Sign);
         informationPanel.add(player2OkButton);
 
         //****
         //pomocniczy panel do wyrownania wszystkich komponentow w informationPanel
         JPanel infoHelpPanel = new JPanel();
+        infoHelpPanel.setBackground(Color.orange);
         infoHelpPanel.setLayout(new BorderLayout(0,15));
-        //infoHelpPanel.setBackground(Color.white);
         JButton startButton = new JButton("START GAME");
         startButton.setEnabled(false);
         infoHelpPanel.add(informationPanel, BorderLayout.CENTER);
@@ -54,8 +56,8 @@ public class MainPanel2 extends JPanel
         //****
         // dolny panel informacyjny
         JPanel bottomPanel = new JPanel();
+        bottomPanel.setBackground(Color.orange);
         bottomPanel.setLayout(new GridLayout(2,1,0,10));
-       // JLabel playingNowLabel = new JLabel("Now playing : ");
         JLabel playingNowLabel = new JLabel("-");
         JLabel fieldOccupiedInfoLabel = new JLabel("-");
         bottomPanel.add(playingNowLabel);
@@ -63,9 +65,9 @@ public class MainPanel2 extends JPanel
 
         StartButtonListener startButtonListener = new StartButtonListener(squares, player1OkButton, player2OkButton, startButton, player1TextField, player2TextField, players, playingNowLabel);
         startButton.addActionListener(startButtonListener);
-        button1OkListener = new OkButton1Listener(informationPanel, player1TextField, player1OkButton, startButton, player1TextField);
+        button1OkListener = new OkButton1Listener(informationPanel, player1TextField, player1OkButton, player1Sign);
         player1OkButton.addActionListener(button1OkListener);
-        button2OkListener = new OkButton2Listener(informationPanel, player2TextField, player2OkButton, startButton, player2TextField);
+        button2OkListener = new OkButton2Listener(informationPanel, player2TextField, player2OkButton, player2Sign);
         player2OkButton.addActionListener(button2OkListener);
 
         FieldListener fieldListener = new FieldListener(squares, players, playingNowLabel, fieldOccupiedInfoLabel, mainFrame, player1TextField, player2TextField);
@@ -73,6 +75,7 @@ public class MainPanel2 extends JPanel
         //****
         //plansza do gry
         JPanel gameBoard = new JPanel();
+        gameBoard.setBackground(Color.orange);
         gameBoard.setPreferredSize(new Dimension(400,400));
         gameBoard.setLayout(new GridLayout(BOARD_SIZE,BOARD_SIZE));
 
@@ -90,6 +93,7 @@ public class MainPanel2 extends JPanel
 
         //dalsza czesc dolnego panelu
         JPanel bottomHelpPanel = new JPanel();
+        bottomHelpPanel.setBackground(Color.orange);
         bottomHelpPanel.setLayout(new BorderLayout(0,10));
         bottomHelpPanel.add(gameBoard, BorderLayout.CENTER);
         bottomHelpPanel.add(bottomPanel, BorderLayout.SOUTH);

@@ -10,16 +10,16 @@ public class OkButton2Listener implements ActionListener
 {
     private JPanel panel;
     private JTextField player2TextField;
-    private JButton player2Button,startButton;
-    private JTextField player2Name;
+    private JButton player2Button;
+    private ImageIcon player2Sign = new ImageIcon("xIconMini.png");
+    private JButton player2SignButton;
 
-    public OkButton2Listener(JPanel panel, JTextField player2TextField, JButton player2Button, JButton startButton, JTextField player2Name)
+    public OkButton2Listener(JPanel panel, JTextField player2TextField, JButton player2Button, JButton player2SignButton )
     {
         this.panel = panel;
         this.player2TextField = player2TextField;
         this.player2Button = player2Button;
-        this.startButton = startButton;
-        this.player2Name = player2Name;
+        this.player2SignButton = player2SignButton;
     }
 
     @Override
@@ -35,11 +35,19 @@ public class OkButton2Listener implements ActionListener
             player2TextField.setBorder(BorderFactory.createEmptyBorder());
             player2TextField.setEditable(false);
             player2Button.setEnabled(false);
+
+            player2SignButton.setText("");
+            player2SignButton.setVisible(true);
+            player2SignButton.setBorder(BorderFactory.createEmptyBorder());
+            player2SignButton.setBackground(Color.orange);
+            player2TextField.setBackground(Color.orange);
+            player2SignButton.setIcon(player2Sign);
+
             StartButtonListener.checkIfUnlockStartButton();
         }
 
         panel.revalidate();
         panel.repaint();
-        //System.out.println("LOL2");
+
     }
 }

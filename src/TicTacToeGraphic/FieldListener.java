@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.WindowEvent;
 
 public class FieldListener implements ActionListener
@@ -12,7 +13,7 @@ public class FieldListener implements ActionListener
     public Player2[] players;
     private int turn = 1;
     private JLabel playingNowLabel, fieldOccupied;
-    private ImageIcon player2Sign = new ImageIcon("X2.png");
+    //private ImageIcon player2Sign = new ImageIcon("xIconMiddle.png");
     Object[] gameOverWindowOptions = {"Try again", "Exit"};
     int winnerDialowWindow, drawDialogWindow;
     private JFrame mainFrame;
@@ -80,7 +81,6 @@ public class FieldListener implements ActionListener
     public void gameWin()
     {
         switchPlayers();
-        System.out.println("Wygrana w poziomie, wygrywa " + players[turn].getName());
         playingNowLabel.setText("");
     }
 
@@ -160,6 +160,7 @@ public class FieldListener implements ActionListener
             mainFrame.dispatchEvent(new WindowEvent(mainFrame, WindowEvent.WINDOW_CLOSING));
         }
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e)

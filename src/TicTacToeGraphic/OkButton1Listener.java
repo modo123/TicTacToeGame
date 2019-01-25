@@ -9,17 +9,17 @@ public class OkButton1Listener implements ActionListener
 {
     private JPanel panel;
     private JTextField player1TextField;
-    private JButton player1Button, startButton;
-    private JTextField player1Name;
-    private ImageIcon player1Sign = new ImageIcon("O3.png");
+    private JButton player1Button;
+    private ImageIcon player1Sign = new ImageIcon("oIconMini.png");
+    private JButton player1SignButton;
 
-    public OkButton1Listener(JPanel panel, JTextField player1TextField, JButton player1Button, JButton startButton, JTextField player1Name)
+
+    public OkButton1Listener(JPanel panel, JTextField player1TextField, JButton player1Button, JButton player1SignButton)
     {
         this.panel = panel;
         this.player1TextField = player1TextField;
         this.player1Button = player1Button;
-        this.startButton = startButton;
-        this.player1Name = player1Name;
+        this.player1SignButton = player1SignButton;
     }
 
     @Override
@@ -34,10 +34,13 @@ public class OkButton1Listener implements ActionListener
             player1TextField.setBorder(BorderFactory.createEmptyBorder());
             player1TextField.setEditable(false);
             player1Button.setEnabled(false);
-            //player1Button.setText("");
-            //player1Button.setBackground(Color.white);
-            //player1Button.setBorder(BorderFactory.createEmptyBorder());
-            //player1Button.setIcon(player1Sign);
+
+            player1SignButton.setText("");
+            player1SignButton.setVisible(true);
+            player1SignButton.setBorder(BorderFactory.createEmptyBorder());
+            player1SignButton.setBackground(Color.orange);
+            player1TextField.setBackground(Color.orange);
+            player1SignButton.setIcon(player1Sign);
 
             StartButtonListener.checkIfUnlockStartButton();
         }

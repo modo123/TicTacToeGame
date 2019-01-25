@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6eb8ede-28bd-412e-8753-6162b1eee9fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/FieldListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/MainPanel2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/MainPanel2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/OkButton1Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/OkButton1Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/OkButton2Listener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/OkButton2Listener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/StartButtonListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TicTacToe/TicTacToeGraphic/StartButtonListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/O.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/O2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/O3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/X2.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToeGraphic/FieldListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToeGraphic/FieldListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToeGraphic/MainFrame2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToeGraphic/MainFrame2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TicTacToeGraphic/MainPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TicTacToeGraphic/MainPanel2.java" afterDir="false" />
@@ -57,23 +56,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="88" />
+          <entry key="java" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="88" />
+          <entry key="JAVA" value="93" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="44" />
-          <entry key="java" value="17192" />
+          <entry key="java" value="17920" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17192" />
+          <entry key="JAVA" value="17920" />
           <entry key="PLAIN_TEXT" value="44" />
         </counts>
       </usages-collector>
@@ -81,32 +80,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicTacToeText/Game.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="51" column="58" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/Game2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/StartButtonListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="102">
+              <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,40 +93,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicTacToeText/Board.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="40" column="43" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="43" />
-              <folding>
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/MainPanel2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="70" column="160" selection-start-line="70" selection-start-column="160" selection-end-line="70" selection-end-column="160" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/FieldListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="190" column="46" selection-start-line="190" selection-start-column="46" selection-end-line="190" selection-end-column="46" />
+            <state relative-caret-position="65">
+              <caret line="175" column="33" lean-forward="true" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#setSign#0;class#FieldListener#0" />
-                <element signature="method#gameWin#0;class#FieldListener#0" />
-                <element signature="method#checkIfWin#0;class#FieldListener#0" />
                 <element signature="method#switchPlayers#0;class#FieldListener#0" />
                 <element signature="method#callDrawDialogActions#0;class#FieldListener#0" />
                 <element signature="method#callWinDialogActions#0;class#FieldListener#0" />
@@ -158,10 +108,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/OkButton1Listener.java">
+        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/Player2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+            <state relative-caret-position="204">
+              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -170,22 +120,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/MainFrame2.java">
+        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/OkButton1Listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+            <state relative-caret-position="-306">
+              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/Main2.java">
+        <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/OkButton2Listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="119">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
-                <element signature="e#237#238#0" expanded="true" />
-                <element signature="e#285#286#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -227,12 +179,12 @@
         <option value="$PROJECT_DIR$/src/TicTacToeText/Game.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeGraphic/StartGameListener2.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeGraphic/Game2.java" />
-        <option value="$PROJECT_DIR$/src/TicTacToeGraphic/OkButton2Listener.java" />
-        <option value="$PROJECT_DIR$/src/TicTacToeGraphic/OkButton1Listener.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeGraphic/MainFrame2.java" />
-        <option value="$PROJECT_DIR$/src/TicTacToeGraphic/StartButtonListener.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeGraphic/MainPanel2.java" />
+        <option value="$PROJECT_DIR$/src/TicTacToeGraphic/StartButtonListener.java" />
         <option value="$PROJECT_DIR$/src/TicTacToeGraphic/FieldListener.java" />
+        <option value="$PROJECT_DIR$/src/TicTacToeGraphic/OkButton1Listener.java" />
+        <option value="$PROJECT_DIR$/src/TicTacToeGraphic/OkButton2Listener.java" />
       </list>
     </option>
   </component>
@@ -291,7 +243,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548454307223" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548458568984" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -381,12 +333,12 @@
       <workItem from="1548170353319" duration="26461000" />
       <workItem from="1548249492149" duration="7207000" />
       <workItem from="1548326455989" duration="42024000" />
-      <workItem from="1548424649307" duration="16704000" />
+      <workItem from="1548424649307" duration="20880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126049000" />
+    <option name="totallyTimeSpent" value="130225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -506,16 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/Player2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToeText/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -533,41 +475,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/OkButton2Listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeText/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="40" column="43" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="43" />
-          <folding>
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/StartButtonListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -585,17 +496,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/MainFrame2.java">
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeText/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="9" column="52" lean-forward="true" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        <state relative-caret-position="119">
+          <caret line="40" column="43" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="43" />
+          <folding>
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/OkButton1Listener.java">
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/Player2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="35" column="44" lean-forward="true" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="44" />
+        <state relative-caret-position="204">
+          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/MainFrame2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -604,8 +529,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/MainPanel2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="70" column="160" selection-start-line="70" selection-start-column="160" selection-end-line="70" selection-end-column="160" />
+        <state relative-caret-position="1122">
+          <caret line="69" column="94" lean-forward="true" selection-start-line="69" selection-start-column="94" selection-end-line="69" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -614,16 +539,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/FieldListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="190" column="46" selection-start-line="190" selection-start-column="46" selection-end-line="190" selection-end-column="46" />
+        <state relative-caret-position="65">
+          <caret line="175" column="33" lean-forward="true" selection-start-line="175" selection-start-column="33" selection-end-line="175" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#setSign#0;class#FieldListener#0" />
-            <element signature="method#gameWin#0;class#FieldListener#0" />
-            <element signature="method#checkIfWin#0;class#FieldListener#0" />
             <element signature="method#switchPlayers#0;class#FieldListener#0" />
             <element signature="method#callDrawDialogActions#0;class#FieldListener#0" />
             <element signature="method#callWinDialogActions#0;class#FieldListener#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/OkButton1Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/OkButton2Listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TicTacToeGraphic/StartButtonListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,6 +1,7 @@
 package TicTacToeGraphic;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MainFrame2 extends JFrame
 {
@@ -8,6 +9,7 @@ public class MainFrame2 extends JFrame
     {
         super("TicTacToe");
         MainPanel2 mainPanel = new MainPanel2(this);
+        mainPanel.setBackground(Color.orange);
         this.setSize(550,600);
         add(mainPanel);
 

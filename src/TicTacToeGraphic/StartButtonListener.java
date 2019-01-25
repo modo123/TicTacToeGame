@@ -12,8 +12,8 @@ public class StartButtonListener implements ActionListener
     private static JButton player1OkButton, player2OkButton, startButton;
     private JTextField player1Name, player2Name;
     private Player2 players[];
-    private ImageIcon player1Sign = new ImageIcon("O2.png");
-    private ImageIcon player2Sign = new ImageIcon("X2.png");
+    private ImageIcon player1Sign = new ImageIcon("oIconMiddle.png");
+    private ImageIcon player2Sign = new ImageIcon("xIconMiddle.png");
     private JLabel playingNowLabel;
 
     public StartButtonListener(JButton[][] squares, JButton player1OkButton, JButton player2OkButton, JButton startButton, JTextField player1name, JTextField player2Name, Player2[] players, JLabel playingNowLabel)
