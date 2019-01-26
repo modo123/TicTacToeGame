@@ -77,7 +77,7 @@ public class FieldListener implements ActionListener
         (
                 squares[0][0].getIcon() != null && squares[0][0].getIcon().equals(squares[1][0].getIcon()) && squares[0][0].getIcon().equals(squares[2][0].getIcon()) ||
                 squares[0][1].getIcon() != null && squares[0][1].getIcon().equals(squares[1][1].getIcon()) && squares[0][1].getIcon().equals(squares[2][1].getIcon()) ||
-                squares[0][2].getIcon() != null && squares[0][2].getIcon().equals(squares[1][1].getIcon()) && squares[0][2].getIcon().equals(squares[2][2].getIcon())
+                squares[0][2].getIcon() != null && squares[0][2].getIcon().equals(squares[1][2].getIcon()) && squares[0][2].getIcon().equals(squares[2][2].getIcon())
         )
             {
                gameWin();
