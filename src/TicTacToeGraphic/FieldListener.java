@@ -162,8 +162,8 @@ public class FieldListener implements ActionListener
 
                     if (occupiedFieldsCounter == 9)
                     {
-                        drawDialogWindow = JOptionPane.showOptionDialog(null, "Draw !", "Game over", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, gameOverWindowOptions, gameOverWindowOptions[0]);
                         playingNowLabel.setText("");
+                        drawDialogWindow = JOptionPane.showOptionDialog(null, "Draw !", "Game over", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, gameOverWindowOptions, gameOverWindowOptions[0]);
                         callDrawDialogActions();
                         return;
                     }
