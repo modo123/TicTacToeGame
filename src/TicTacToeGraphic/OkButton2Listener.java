@@ -5,14 +5,17 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 public class OkButton2Listener implements ActionListener
 {
     private JPanel panel;
     private JTextField player2TextField;
     private JButton player2Button;
-    private ImageIcon player2Sign = new ImageIcon("xIconMini.png");
+    //private ImageIcon player2Sign = new ImageIcon("xIconMini.png");
     private JButton player2SignButton;
+    URL url = OkButton2Listener.class.getResource("/resources/xIconMini.png");
+    private ImageIcon player2Sign = new ImageIcon(url);
 
     public OkButton2Listener(JPanel panel, JTextField player2TextField, JButton player2Button, JButton player2SignButton )
     {

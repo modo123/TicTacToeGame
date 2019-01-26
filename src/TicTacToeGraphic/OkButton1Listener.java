@@ -4,14 +4,17 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 public class OkButton1Listener implements ActionListener
 {
     private JPanel panel;
     private JTextField player1TextField;
     private JButton player1Button;
-    private ImageIcon player1Sign = new ImageIcon("oIconMini.png");
+    //private ImageIcon player1Sign = new ImageIcon("oIconMini.png");
     private JButton player1SignButton;
+    URL url = OkButton2Listener.class.getResource("/resources/oIconMini.png");
+    private ImageIcon player1Sign = new ImageIcon(url);
 
 
     public OkButton1Listener(JPanel panel, JTextField player1TextField, JButton player1Button, JButton player1SignButton)
