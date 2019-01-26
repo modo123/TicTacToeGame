@@ -12,11 +12,11 @@ public class FieldListener implements ActionListener
     public Player[] players;
     private int turn = 1;
     private JLabel playingNowLabel, fieldOccupied;
-    //private ImageIcon player2Sign = new ImageIcon("xIconMiddle.png");
     Object[] gameOverWindowOptions = {"Try again", "Exit"};
     int winnerDialowWindow, drawDialogWindow;
     private JFrame mainFrame;
     private JTextField player1Name, player2Name;
+    int occupiedFieldsCounter = 0;
 
 
     public FieldListener(JButton[][] squares, Player[] players, JLabel playingNowLabel, JLabel fieldOccupied, JFrame mainFrame, JTextField player1Name, JTextField player2Name)
@@ -44,36 +44,11 @@ public class FieldListener implements ActionListener
         {
             Player player = players[turn];
             squares[i][j].setIcon(player.getSign());
+            occupiedFieldsCounter++;
             squares[i][j].setText("");
             fieldOccupied.setText("");
             switchPlayers();
         }
-    }
-
-    public boolean checkIfAllFieldOccupied()
-    {
-        int occupiedFieldsCounter = 0;
-
-        for (int i = 0; i < squares.length; i++)
-        {
-            for (int j = 0; j < squares[i].length; j++)
-            {
-                if (!squares[i][j].getText().equals("-"))
-                {
-                    occupiedFieldsCounter++;
-                }
-            }
-        }
-
-        if (occupiedFieldsCounter == 9)
-        {
-            drawDialogWindow = JOptionPane.showOptionDialog(null, "Draw !", "Game over", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, gameOverWindowOptions, gameOverWindowOptions[0]);
-            playingNowLabel.setText("");
-            callDrawDialogActions();
-            return true;
-        }
-
-        return false;
     }
 
 
@@ -174,16 +149,23 @@ public class FieldListener implements ActionListener
                 {
                     setSign(i,j);
 
-                    checkIfAllFieldOccupied();
-
                     if (checkIfWin())
                     {
                         winnerDialowWindow = JOptionPane.showOptionDialog(null, "The winner is " + players[turn].getName(), "Game over", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE,null, gameOverWindowOptions, gameOverWindowOptions[0]);
                         callWinDialogActions();
+                        return;
                     }
                     else
                     {
                         playingNowLabel.setText("Now playing : " + players[turn].getName());
+                    }
+
+                    if (occupiedFieldsCounter == 9)
+                    {
+                        drawDialogWindow = JOptionPane.showOptionDialog(null, "Draw !", "Game over", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, gameOverWindowOptions, gameOverWindowOptions[0]);
+                        playingNowLabel.setText("");
+                        callDrawDialogActions();
+                        return;
                     }
                 }
             }
